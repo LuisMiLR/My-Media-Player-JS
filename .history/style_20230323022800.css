@@ -1,0 +1,121 @@
+*{
+    font-family: 'sans-serif';
+}
+html {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+.container {
+    display: flex;
+    background: #111111;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+}
+
+.allVid {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: transparent;
+
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.2s;
+}
+
+.allVid:hover .controls {
+    transform: translateY(0);
+}
+
+
+.buttons {
+    padding: 15px;
+}
+
+
+.buttons button {
+  
+    height: 40px;
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mute {
+    position: relative;
+    top: -5px;
+
+    margin-right: 20px;
+}
+
+#playPause::before {
+    
+    content: '\f144';
+    font-family: 'Font Awesome 5 free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 48px;
+    color: #fff;
+}
+
+#playPause.play::before {
+    content: '\f144';
+}
+
+ #playpause.pause::before {
+    content: '\f28b';
+}
+.buttons #stop{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.orange-bar {
+    height: 10px;
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.orange-juice {
+    height: 2px;
+    background-color: #ae121c;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: silver;
+    width: 90px;
+    height:1vh;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #ae121c;
+    
+    width: 5px;
+    height: 2vh;
+}
